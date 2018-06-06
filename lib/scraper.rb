@@ -8,7 +8,8 @@ class Scraper
   #attr_accessor :doc
   
   def get_page 
-    doc = Nokogiri::HTML(open(""))
+    doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
+    doc.css(".post")
   end 
   
   def make_courses 
